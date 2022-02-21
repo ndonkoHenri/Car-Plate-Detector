@@ -16,7 +16,7 @@ def empty(x):
 
 # Creation of trackbars and a window
 cv.namedWindow("Trackbars")
-cv.resizeWindow("Trackbars", 500, 200)
+cv.resizeWindow("Trackbars", 500, 140)
 cv.createTrackbar("Scale", "Trackbars", 99, 1000, empty)
 cv.createTrackbar("Min Neig", "Trackbars", 3, 20, empty)  # Minimum Neighbors
 cv.createTrackbar("Min Area", "Trackbars", 450, 11000, empty)  # Minimum Area

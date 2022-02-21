@@ -17,13 +17,14 @@ def empty(x):
 cv.namedWindow("Trackbars")
 cv.resizeWindow("Trackbars", 500, 200)
 cv.createTrackbar("Brightness", "Trackbars", 72, 255, empty)
-cv.createTrackbar("Scale", "Trackbars", 400, 1000, empty)
-cv.createTrackbar("Min Neig", "Trackbars", 8, 20, empty)  # Minimum Neighbors
-cv.createTrackbar("Min Area", "Trackbars", 100, 100000, empty)  # Minimum Area
+cv.createTrackbar("Scale", "Trackbars", 3, 100, empty)
+cv.createTrackbar("Min Neig", "Trackbars", 2, 20, empty)  # Minimum Neighbors
+cv.createTrackbar("Min Area", "Trackbars", 10, 6000, empty)  # Minimum Area
 
 cascade = cv.CascadeClassifier(cascadeFilePath)  # Loading the classifiers
 
-
+print(
+    "Info: \n-Try moving the Trackbars to have better results; \n-Press Q to stop the Program! !")
 while True:
     success, img = cap.read()
     brightness = cv.getTrackbarPos("Brightness", "Trackbars")
@@ -36,6 +37,7 @@ while True:
     imgGray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)  # Convert to grayScale
     scaleVal = 1 + (scale / 1000)  # Max value = 1 + (1000/1000)
     carPlates = cascade.detectMultiScale(imgGray, scale, min_neighbors)
+
     croppedPlate = img
     for (x, y, w, h) in carPlates:
         area = w * h  # The area of the detected plate
@@ -44,6 +46,7 @@ while True:
             cv.putText(img, "Plate", (x, y - 5), cv.FONT_HERSHEY_COMPLEX, 1, contour_color,
                        2)  # Puts Text on the COPY
             croppedPlate = img[y:y + h, x:x + w]  # OriginalImage being cropped to show the Plate only
+            cv.imshow("Plate Only", croppedPlate)
 
     cv.imshow("Car Plate Detector by ndonkoHenri", img)  # Displays the stacked images
     if cv.waitKey(1) == 113:  # Q=113
