@@ -36,8 +36,7 @@ Being completely sincere, I will tell you some of the top reasons for you to use
  - Try it out to find more interesting features(ex: speed) and let me know...
 
 
-***
 
->              I say: Thank You for using my Programs!! :-)
+>              I(ndonkoHenri) say: _Thank You for using my Programs!! :-)_
 
-***
+
