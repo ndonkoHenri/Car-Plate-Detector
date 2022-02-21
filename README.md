@@ -39,6 +39,6 @@ Being completely sincere, I will tell you some of the top reasons for you to use
 
 
 
->              I(ndonkoHenri) say: _Thank You for using my Programs!! :-)_
+>              I(ndonkoHenri) say: *Thank You for using my Programs!! :-)*
 
 
