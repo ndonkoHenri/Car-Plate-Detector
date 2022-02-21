@@ -12,6 +12,8 @@ An Algorithm is the simplest and understandable way to represent a program.
 - Using the OpenCV python library and a HaarCascade file, it scans through the given objects(image or webcam), searching for one thing ~ Car Plates;
 - When detected, it the returns the position in the actual frame;
 - A bounding box is then drawn around this detected Car Plate and a text("Plate") is written above it.
+![webcam](https://user-images.githubusercontent.com/98978078/154958272-09eef7c9-4971-4d93-b262-2dd5743061ef.png)
+
 
 ## Why use this Program amongst all out there?
 Being completely sincere, I will tell you some of the top reasons for you to use this program...
